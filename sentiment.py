@@ -1,7 +1,7 @@
 import os, requests, uuid, json
 
 # Don't forget to replace with your Cog Services subscription key!
-subscription_key = 'YOUR_TEXT_ANALYTICS_SUBSCRIPTION_KEY'
+subscription_key = os.getenv("COGNITIVE_SERVICE_SUBSCRIPTION_KEY")
 
 # Our Flask route will supply four arguments: input_text, input_language,
 # output_text, output_language.

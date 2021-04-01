@@ -3,7 +3,7 @@ from xml.etree import ElementTree
 
 class TextToSpeech(object):
     def __init__(self, input_text, voice_font):
-        subscription_key = 'YOUR_SPEECH_SERVICES_SUBSCRIPTION_KEY'
+        subscription_key = os.getenv("COGNITIVE_SERVICE_SUBSCRIPTION_KEY")
         self.subscription_key = subscription_key
         self.input_text = input_text
         self.voice_font = voice_font
